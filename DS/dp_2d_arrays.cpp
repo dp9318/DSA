@@ -4,15 +4,15 @@ using namespace std;
 
 int main(){
     int row=4, col=4;
-    // int **matrix;
+    int **matrix;
 
-    // matrix = (int**)malloc(row*sizeof(int));
+    matrix = (int**)malloc(row*sizeof(int));
 
-    // for(int i=0; i<row; i++){
+    for(int i=0; i<row; i++){
 
-    //     matrix[i] = (int*)malloc(col*sizeof(int));
-    // }
-    int matrix[row][col];
+        matrix[i] = (int*)malloc(col*sizeof(int));
+    }
+    // int matrix[row][col];
     for(int i=0; i<row; i++){
         for(int j=0; j<col; j++){
             matrix[i][j]=i+j;
@@ -26,9 +26,9 @@ int main(){
         cout<<endl;
     }
 
-    // for (int i = 0; i < row; i++) {
-    //     free(matrix[i]);
-    // }
-    // free(matrix);
+    for (int i = 0; i < row; i++) {
+        free(matrix[i]);
+    }
+    free(matrix);
     return 0;
 }
