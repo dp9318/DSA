@@ -1,8 +1,16 @@
-#include<stdio.h>
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int main(){
-    printf("%f", 10.5+20.2);
+int main() {
+
+    int n;
+    
+    scanf("%d",&n);
+    char arr[10];
+    for(int i=0; i<n; i++){
+        scanf("%c",&arr[i]);
+    }
+    for(int i=0; i<n; i++){
+        printf("%c",arr[i]);
+    }
     return 0;
 }
