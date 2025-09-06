@@ -46,6 +46,18 @@ class Stack{
     bool isFull(){
         return top == size;
     }
+    void display() {
+        if (isEmpty()) {
+            cout << "Stack is empty. Nothing to display." << endl;
+            return;
+        }
+        cout << "Stack elements (top to bottom): "<<endl;
+        for (int i = top-1; i >= 0; i--) {
+            cout << "| " <<arr[i] << " |";
+            cout << endl;
+        }
+        cout<<"|____|"<<endl;
+    }
 };  
 
 int main(){
@@ -63,6 +75,7 @@ int main(){
         cout<<"3. Top"<<endl;
         cout<<"4. check Empty"<<endl;
         cout<<"5. check Full"<<endl;
+        cout<<"6. Display all elements"<<endl;
         cout<<"0. EXIT"<<endl;
         cout<<"Enter your choice: ";
         cin>>con;
@@ -100,6 +113,10 @@ int main(){
                     break;
                 }
                 cout<<"Stack is not full!"<<endl;
+                break;
+
+            case 6:
+                s.display();
                 break;
 
             default:
