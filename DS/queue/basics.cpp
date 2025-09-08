@@ -44,7 +44,7 @@ class Queue{
         }
 
         bool isFull(){
-            return rear > size-1 ; 
+            return rear == size ; 
         }
 
         void Front(){
@@ -52,7 +52,7 @@ class Queue{
                 cout<<"Queue is empty, no elements at front!"<<endl;
                 return;
             }
-            cout<<arr[front-1]<<" is at the front!"<<endl;
+            cout<<arr[front]<<" is at the front!"<<endl;
         }
         void Rear(){
             if(isEmpty()){
@@ -72,7 +72,9 @@ class Queue{
             for(int i= front; i<rear; i++){
                 cout<<arr[i]<<" ";
             }
+            cout<<endl;
         }
+
     ~Queue(){
         delete[] arr;
     }
@@ -98,6 +100,7 @@ int main(){
         cout<<"0. EXIT"<<endl;
         cout<<"Enter your choice: ";
         cin>>choice;
+        cout<<endl;
 
         switch(choice){
 
