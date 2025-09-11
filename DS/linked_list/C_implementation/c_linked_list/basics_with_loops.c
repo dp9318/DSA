@@ -21,11 +21,11 @@ int main() {
         curr->next = NULL;
 
         if (first == NULL) {
-            first = curr;   // first node
+            first = curr;  
         } else {
-            prev->next = curr;  // link previous node
+            prev->next = curr;  
         }
-        prev = curr;  // update prev
+        prev = curr;  
     }
 
     curr = first;
