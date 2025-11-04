@@ -11,13 +11,26 @@ int main(){
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-
-    int buy_date, sell_date=0;
-
-    //finding the minnumum stock price
-    for(int i=0; i<n; i++){
-        
+    int count=0;
+    int profit[n*n];
+    for(int i=0; i<n-1; i++){
+        for(int j=i+1; j<n; j++){
+            profit[count] = arr[j]-arr[i];
+            count++;
+        }
     }
+    int max=profit[0];
+    for(int i=0; i<count; i++){
+        if(max<profit[i]){
+            max=profit[i];
+        }
+    }
+    
+    if(max<0){
+        max=0;
+    }
+    cout<<max;
+
 
     return 0;
 }
