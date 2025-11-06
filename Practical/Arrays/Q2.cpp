@@ -19,7 +19,7 @@ int * sort(int arr[], int size){
         }
     }
     for(int i=0; i<size; i++){
-        if(i<count0){
+        if(i<count0){ 
             arr[i]=0;
         }
         else if(i<count0+count1){

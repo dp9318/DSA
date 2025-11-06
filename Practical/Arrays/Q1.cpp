@@ -3,15 +3,15 @@
 #include <iostream>
 using namespace std;
 
-int * reverseArr(int arr[], int size){
-    int n=size;
-    for(int i=0; i<n/2; i++){
-        int temp=arr[i];
-        arr[i]=arr[n-i-1];
-        arr[n-i-1]=temp;
-    }
-    return arr;
-}
+// int * reverseArr(int arr[], int size){
+//     int n=size;
+//     for(int i=0; i<n/2; i++){
+//         int temp=arr[i];
+//         arr[i]=arr[n-i-1];
+//         arr[n-i-1]=temp;
+//     }
+//     return arr;
+// }
 
 //another version and more simpler
 
@@ -32,11 +32,11 @@ int main(){
         cpy_arr[i]=arr[i];
     }
 
-    int *reversed = reverseArr(arr,n);
-    cout<<"Reversed : ";
-    for(int i=0; i<n; i++){
-        cout<<arr[i]<<" ";
-    }
+    // int *reversed = reverseArr(arr,n);
+    // cout<<"Reversed : ";
+    // for(int i=0; i<n; i++){
+    //     cout<<arr[i]<<" ";
+    // }
 
     // another way
 
