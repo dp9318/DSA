@@ -26,6 +26,6 @@ int main(){
     int max=arr[0];
     arrMax(arr,n,&max);
     cout<<"Max of the array: "<<max;
-
+    delete [] arr;
     return 0;
 }
