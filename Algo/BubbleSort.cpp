@@ -24,7 +24,6 @@ int* input(int size){
 
 int main(){
 
-
     int n;
     cout<<"Enter the size of array:";
     cin>>n;
