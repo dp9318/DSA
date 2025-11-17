@@ -28,12 +28,30 @@ int* insertionSort(int arr[], int size){
     return arr;
 }
 
+int* inputArr(int size){
+    int *arr = new int[size];
+    for(int i=0; i<size; i++){
+        cin>>arr[i];
+    }
+    return arr;
+}
+
 int main(){
 
-    int arr[] = {64, 34, 25, 12, 22, 110, 90, 5};
-    int len_arr = sizeof(arr)/sizeof(arr[0]);
-    insertionSort(arr,len_arr);
-    for(int i=0; i<len_arr; i++){
+    // int arr[] = {64, 34, 25, 12, 22, 110, 90, 5};
+
+    int n;
+    cout<<"Enter the size of array: ";
+    cin>>n;
+
+    cout<<"Enter the elements: ";
+    int * arr = new int[n];
+    arr = inputArr(n);
+
+
+    // int len_arr = sizeof(arr)/sizeof(arr[0]);
+    insertionSort(arr,n);
+    for(int i=0; i<n; i++){
         cout<<arr[i]<<"  ";
     }
     return 0;
