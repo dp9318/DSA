@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// Bubble sort using classes
 class BubbleSort{
     public:
     int* Sort(int arr[], int size){
